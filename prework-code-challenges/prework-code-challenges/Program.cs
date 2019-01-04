@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 //Given an array select a number that exists, and output the computated "score". 
 //The method you create should take in both an array of integers and the integer the user selected.
@@ -50,8 +51,6 @@ namespace prework_code_challenges
     }
     class LeapYear
     {
-
-
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome I am your host, Computer. \nI will let you know if a year is a Leap Year");
@@ -112,5 +111,48 @@ namespace prework_code_challenges
             Test();
         }
 
+    }
+    class PerfectSequence
+    {
+        static void Main(string[] args)
+        {
+            int sum = 0;
+            int product = 1;
+
+            Console.WriteLine("Welcome and Welcome, I am your host, Computer!/nLets figure out if a list of numbers is a perfect sequence!!");
+            Console.WriteLine("Please enter a number when I prompt you and type 'Done' when you dont want to enter any more numbers");
+            Console.WriteLine("Let's begin.");
+            bool done = false;
+            List<int> sequence = new List<int>();
+            while (!done)
+            {
+                Console.WriteLine("Please enter a number to add to the sequence.");
+                Int32.TryParse(Console.ReadLine(), out int num);
+                sequence.Add(num);
+                Console.WriteLine("Are you done? If so enter 'Done' otherwise press the ENTER key");
+                string doneAnswer = Console.ReadLine();
+                if (doneAnswer == "Done")
+                {
+                    done = true;
+                }
+            }
+            foreach(int num in sequence)
+            {
+                if(num < 0)
+                {
+                    Console.WriteLine("Ooops something went wrong!");
+                }
+                sum += num;
+                product *= num;
+            }
+            if (sum == product)
+            {
+                Console.WriteLine("This is a perfect sequence!");
+            }
+            else
+            {
+                Console.WriteLine("This is not a perfect sequence");
+            }
+        }
     }
 }
