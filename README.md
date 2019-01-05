@@ -35,3 +35,20 @@ A perfect sequence is a sequence such that all of its elements are non-negative 
 
 #### Failure
 ![cr3b](NotPerfectSeq.png)
+
+
+## Problem 4: Sum of Rows
+
+### Promblem Statement
+Given a matrix of integers. Return the sum of each row in a single dimensional array.
+
+Input Format
+a multidimensional array with the dimensions of m x n (m = rows, n = columns).
+
+- duplicate integers are possible.
+- Negative numbers are possible
+- both m and n can vary in length
+- The user should specify the length and the width of the array within the console. To populate the numbers, you may randomly generate them, or have the user input one by one.
+
+### Image Output
+![cr4](Matrix3d.png)
