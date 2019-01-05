@@ -10,149 +10,191 @@ using System.Collections.Generic;
 
 namespace prework_code_challenges
 {
-    class ArrayMultiplier
+    //class ArrayMultiplier
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        string userName;
+    //        int multiplier = 0;
+    //        Console.WriteLine("Hello! This is interactive game, so what's your name?");
+    //        userName = Console.ReadLine();
+    //        Console.WriteLine("Well {0} I'm pleased to meet you,\nI am the computer. Salutations!", userName);
+    //        Console.WriteLine("Let's get started shall we. Please enter 5 numbers between 1-10.\nI will prompt you for each one individually.");
+    //        Console.WriteLine("Your First Number...");
+    //        Int32.TryParse(Console.ReadLine(), out int num1);
+    //        if (num1 > 10 || num1 < 1)
+    //        {
+    //            Console.WriteLine("oops you fucked up");
+    //        }
+    //        Console.WriteLine("Your Second Number...");
+    //        Int32.TryParse(Console.ReadLine(), out int num2);
+    //        Console.WriteLine("Your Third Number...");
+    //        Int32.TryParse(Console.ReadLine(), out int num3);
+    //        Console.WriteLine("Your Fourth Number...");
+    //        Int32.TryParse(Console.ReadLine(), out int num4);
+    //        Console.WriteLine("Your Fifth Number...");
+    //        Int32.TryParse(Console.ReadLine(), out int num5);
+    //        int[] numArray = new int[5] { num1, num2, num3, num4, num5 };
+    //        Console.WriteLine("Fantastic! Now choose any one of those Numbers and I will tell you your Score.");
+    //        Int32.TryParse(Console.ReadLine(), out int chosenNum);
+
+    //        foreach (int num in numArray)
+    //        {
+    //            if (num == chosenNum)
+    //            {
+    //                multiplier += 1;
+    //            }
+    //        }
+    //        int score = chosenNum * multiplier;
+    //        Console.WriteLine("Your Score is {0}! Congratz and Thanks for playing!", score);
+    //    }
+    //}
+    //class LeapYear
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Console.WriteLine("Welcome I am your host, Computer. \nI will let you know if a year is a Leap Year");
+    //        void Test()
+    //        {
+    //            bool con1 = true, con2 = true, con3 = true;
+    //            Console.WriteLine("Please enter a year that you wish to know about.");
+    //            Int32.TryParse(Console.ReadLine(), out int year);
+    //            decimal con1Math = Decimal.Divide(year, 4);
+    //            decimal con2Math = Decimal.Divide(year, 100);
+    //            decimal con3Math = Decimal.Divide(year, 400);
+
+    //            if ((con1Math % 1) > 0)
+    //            {
+    //                con1 = false;
+    //            }
+    //            if ((con2Math % 1) > 0)
+    //            {
+    //                con2 = false;
+    //            }
+    //            if ((con3Math % 1) > 0)
+    //            {
+    //                con3 = false;
+    //            }
+    //            if (con1 & con2 & con3 || con1)
+    //            {
+    //                Console.WriteLine("Yes, that year is a leap year.");
+    //            }
+    //            else
+    //            {
+    //                Console.WriteLine("No, that year is not a leap year.");
+    //            }
+    //            Retry();
+    //        }
+    //        void Retry() {
+    //            bool retry = false;
+    //            Console.WriteLine("Would you like to try again? Yes or No");
+    //            string answer = Console.ReadLine();
+    //            if (answer == "Yes")
+    //            {
+    //                retry = true;
+    //            }
+    //            if(answer == "No")
+    //            {
+    //                Console.WriteLine("Thank you, see you soon!");
+    //                retry = false;
+    //            }
+    //            if (answer != "Yes" && answer != "No")
+    //            {
+    //                Console.WriteLine("That is not a valid response.");
+    //                Retry();
+    //            }
+    //            if (retry == true)
+    //            {
+    //                Test();
+    //            }
+    //        }
+    //        Test();
+    //    }
+
+    //}
+    //class PerfectSequence
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        int sum = 0;
+    //        int product = 1;
+
+    //        Console.WriteLine("Welcome and Welcome, I am your host, Computer!/nLets figure out if a list of numbers is a perfect sequence!!");
+    //        Console.WriteLine("Please enter a number when I prompt you and type 'Done' when you dont want to enter any more numbers");
+    //        Console.WriteLine("Let's begin.");
+    //        bool done = false;
+    //        List<int> sequence = new List<int>();
+    //        while (!done)
+    //        {
+    //            Console.WriteLine("Please enter a number to add to the sequence.");
+    //            Int32.TryParse(Console.ReadLine(), out int num);
+    //            sequence.Add(num);
+    //            Console.WriteLine("Are you done? If so enter 'Done' otherwise press the ENTER key");
+    //            string doneAnswer = Console.ReadLine();
+    //            if (doneAnswer == "Done")
+    //            {
+    //                done = true;
+    //            }
+    //        }
+    //        foreach(int num in sequence)
+    //        {
+    //            if(num < 0)
+    //            {
+    //                Console.WriteLine("Ooops something went wrong!");
+    //            }
+    //            sum += num;
+    //            product *= num;
+    //        }
+    //        if (sum == product)
+    //        {
+    //            Console.WriteLine("This is a perfect sequence!");
+    //        }
+    //        else
+    //        {
+    //            Console.WriteLine("This is not a perfect sequence");
+    //        }
+    //    }
+    //}
+    class SumofRows
     {
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
-            string userName;
-            int multiplier = 0;
-            Console.WriteLine("Hello! This is interactive game, so what's your name?");
-            userName = Console.ReadLine();
-            Console.WriteLine("Well {0} I'm pleased to meet you,\nI am the computer. Salutations!", userName);
-            Console.WriteLine("Let's get started shall we. Please enter 5 numbers between 1-10.\nI will prompt you for each one individually.");
-            Console.WriteLine("Your First Number...");
-            Int32.TryParse(Console.ReadLine(), out int num1);
-            if (num1 > 10 || num1 < 1)
-            {
-                Console.WriteLine("oops you fucked up");
-            }
-            Console.WriteLine("Your Second Number...");
-            Int32.TryParse(Console.ReadLine(), out int num2);
-            Console.WriteLine("Your Third Number...");
-            Int32.TryParse(Console.ReadLine(), out int num3);
-            Console.WriteLine("Your Fourth Number...");
-            Int32.TryParse(Console.ReadLine(), out int num4);
-            Console.WriteLine("Your Fifth Number...");
-            Int32.TryParse(Console.ReadLine(), out int num5);
-            int[] numArray = new int[5] { num1, num2, num3, num4, num5 };
-            Console.WriteLine("Fantastic! Now choose any one of those Numbers and I will tell you your Score.");
-            Int32.TryParse(Console.ReadLine(), out int chosenNum);
 
-            foreach (int num in numArray)
-            {
-                if (num == chosenNum)
-                {
-                    multiplier += 1;
-                }
-            }
-            int score = chosenNum * multiplier;
-            Console.WriteLine("Your Score is {0}! Congratz and Thanks for playing!", score);
-        }
-    }
-    class LeapYear
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Welcome I am your host, Computer. \nI will let you know if a year is a Leap Year");
-            void Test()
-            {
-                bool con1 = true, con2 = true, con3 = true;
-                Console.WriteLine("Please enter a year that you wish to know about.");
-                Int32.TryParse(Console.ReadLine(), out int year);
-                decimal con1Math = Decimal.Divide(year, 4);
-                decimal con2Math = Decimal.Divide(year, 100);
-                decimal con3Math = Decimal.Divide(year, 400);
+            //Define the Matrix
 
-                if ((con1Math % 1) > 0)
+            Console.WriteLine("Okay, lets find the sum of the rows of a 3D Matrix!");
+            Console.WriteLine("How many numbers should be in the rows?");
+            Int32.TryParse(Console.ReadLine(), out int columns);
+            Console.WriteLine("How many rows should there be in the matrix?");
+            Int32.TryParse(Console.ReadLine(), out int rows);
+
+            int[,] multiArray = new int[columns, rows];
+            int[] solutionArray = new int[rows];
+
+            //Fill the Matrix
+
+            for(int i = 0; i < multiArray.GetLength(0); i++)
+            {
+                Random random = new Random();
+                for (int k = 0; k < multiArray.GetLength(1); k++)
                 {
-                    con1 = false;
-                }
-                if ((con2Math % 1) > 0)
-                {
-                    con2 = false;
-                }
-                if ((con3Math % 1) > 0)
-                {
-                    con3 = false;
-                }
-                if (con1 & con2 & con3 || con1)
-                {
-                    Console.WriteLine("Yes, that year is a leap year.");
-                }
-                else
-                {
-                    Console.WriteLine("No, that year is not a leap year.");
-                }
-                Retry();
-            }
-            void Retry() {
-                bool retry = false;
-                Console.WriteLine("Would you like to try again? Yes or No");
-                string answer = Console.ReadLine();
-                if (answer == "Yes")
-                {
-                    retry = true;
-                }
-                if(answer == "No")
-                {
-                    Console.WriteLine("Thank you, see you soon!");
-                    retry = false;
-                }
-                if (answer != "Yes" && answer != "No")
-                {
-                    Console.WriteLine("That is not a valid response.");
-                    Retry();
-                }
-                if (retry == true)
-                {
-                    Test();
+                    multiArray[i, k] = random.Next(10);
                 }
             }
-            Test();
+
+            //Compute the Matrix
+
+            for (int i = 0; i < multiArray.GetLength(0); i++)
+            {
+                int sum = 0;
+                for (int k = 0; k < multiArray.GetLength(1); k++)
+                {
+                    sum += multiArray[i, k];
+                }
+                solutionArray[i] = sum;
+            }
+            Console.WriteLine("Sums of the rows are: " + string.Join(",", solutionArray));
         }
 
-    }
-    class PerfectSequence
-    {
-        static void Main(string[] args)
-        {
-            int sum = 0;
-            int product = 1;
-
-            Console.WriteLine("Welcome and Welcome, I am your host, Computer!/nLets figure out if a list of numbers is a perfect sequence!!");
-            Console.WriteLine("Please enter a number when I prompt you and type 'Done' when you dont want to enter any more numbers");
-            Console.WriteLine("Let's begin.");
-            bool done = false;
-            List<int> sequence = new List<int>();
-            while (!done)
-            {
-                Console.WriteLine("Please enter a number to add to the sequence.");
-                Int32.TryParse(Console.ReadLine(), out int num);
-                sequence.Add(num);
-                Console.WriteLine("Are you done? If so enter 'Done' otherwise press the ENTER key");
-                string doneAnswer = Console.ReadLine();
-                if (doneAnswer == "Done")
-                {
-                    done = true;
-                }
-            }
-            foreach(int num in sequence)
-            {
-                if(num < 0)
-                {
-                    Console.WriteLine("Ooops something went wrong!");
-                }
-                sum += num;
-                product *= num;
-            }
-            if (sum == product)
-            {
-                Console.WriteLine("This is a perfect sequence!");
-            }
-            else
-            {
-                Console.WriteLine("This is not a perfect sequence");
-            }
-        }
     }
 }
